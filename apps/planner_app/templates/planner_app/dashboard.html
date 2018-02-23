@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../static/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="../static/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+  
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <a href="/logout">Logout</a>
+      <div class="hero-unit">
+        <h1>Welcome to Tube-ver, {{user.username}}</h1>
+        <p>On Tube-ver you can create a list of videos you plan to shoot.</p>
+        <p><a href="#" class="btn btn-primary btn-large">Learn more about Tube-ver</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>Create a new video</h2>
+          <p>Click to add new video to your to-do list.</p>
+          <p><a class="btn" href="/main/new">Add new video &raquo;</a></p>
+        </div>
+
+      </div>
+      <h2>Your videos</h2>
+      <table class="table">
+          <tr>
+              <th>Title</th>
+              <th>Video Number</th>
+              <th>Playlist</th>
+              <th>Description</th>
+              <th>Prep</th>
+              <th>Materials</th>
+              <th>Tags</th>
+          </tr>
+          {%for video in videos%}
+          <td><a href="/main/show/{{video.id}}">{{video.title}}</a></td>
+          <td>{{video.video_number}}</td>
+          <td>{{video.playlist}}</td>
+          <td>{{video.description}}</td>
+          <td>{{video.preperation}}</td>
+          <td>{{video.materials}}</td>
+          <td>{{video.tags}}</td>
+          {%endfor%}
+          <tr>
+
+          </tr>
+      </table>
+
+      <hr>
+
+      <footer>
+        <p>Tube-ver, 2018</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+

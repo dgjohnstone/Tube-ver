@@ -1,0 +1,30 @@
+
+<h1>{{video.title}}</h1>
+
+<h3>Video Number</h3>
+<p>{{video.video_number}}</p><br>
+<h3>Playlist</h3>
+<p>{{video.playlist}}</p><br>
+<h3>Description</h3>
+<p>{{video.description}}</p><br>
+<h3>Preperation</h3>
+<p>{{video.preperation}}</p><br>
+<h3>Materials</h3>
+<p>{{video.materials}}</p><br>
+<h3>Tags</h3>
+<p>{{video.tags}}</p><br>
+
+<h3>Need to make a change?</h3>
+<form action="/main/update/{{video.id}}">
+    <input type="submit" value="Update Video">
+</form>
+
+<h3>Are you finshed with your video?</h3>
+<form action="/main/delete/{{video.id}}">
+    <input type="submit" value="Delete Video">
+</form>
+
+
+
+<a href="/main/dashboard">Go to Dashboard</a>
+

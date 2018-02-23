@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Plan your new video!</h1>
+
+
+    <form action="/main/create" method='post'>
+        {% csrf_token %}
+    Video Number:<input type="number" name="video_number"><br>
+
+    Title:<input type="text" name="title"><br>
+
+
+    Playlist:<input type="text" name="playlist"><br>
+
+    Description:<br><textarea name="description"></textarea><br>
+
+    Preperation:<input type="text" name="preperation"><br>
+
+    Material/s:<input type="text" name="materials"><br>
+
+    Tags:<br><textarea name="tags" placeholder="Separate tags with commas" ></textarea><br>
+    <input type="submit" value="Add new video">
+    </form>
+
+    <a href="/main/dashboard">Back to Homepage</a>
+
+
+
+    
+</body>
+</html>
